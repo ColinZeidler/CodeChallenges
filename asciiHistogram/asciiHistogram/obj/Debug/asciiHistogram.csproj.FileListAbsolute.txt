@@ -1,0 +1,6 @@
+C:\Users\Colin\Documents\GitHub\CodeChallenges\asciiHistogram\asciiHistogram\bin\Debug\asciiHistogram.exe.config
+C:\Users\Colin\Documents\GitHub\CodeChallenges\asciiHistogram\asciiHistogram\bin\Debug\asciiHistogram.exe
+C:\Users\Colin\Documents\GitHub\CodeChallenges\asciiHistogram\asciiHistogram\bin\Debug\asciiHistogram.pdb
+C:\Users\Colin\Documents\GitHub\CodeChallenges\asciiHistogram\asciiHistogram\obj\Debug\asciiHistogram.csprojResolveAssemblyReference.cache
+C:\Users\Colin\Documents\GitHub\CodeChallenges\asciiHistogram\asciiHistogram\obj\Debug\asciiHistogram.exe
+C:\Users\Colin\Documents\GitHub\CodeChallenges\asciiHistogram\asciiHistogram\obj\Debug\asciiHistogram.pdb
