@@ -9,7 +9,7 @@ namespace asciiHistogram
     class Graph
     {
         private int[,] table;
-        private int[] bounds;
+        private int[] bounds; // xStart, xEnd, yStart, yEnd
         private int entryCount;
 
         public Graph(int[] bounds, int entries)
@@ -29,7 +29,21 @@ namespace asciiHistogram
 
         public void printGraph()
         {
+            int columnWidth = 1;
 
+            for (int i = this.bounds[3]; i > this.bounds[2]-1; i--)
+            {
+                Console.Write(i);
+                // Write all columns out
+                Console.Write("\n");
+            }
+            Console.Write(" "); //TODO space is width of y axis digits
+            for (int i = 0; i < this.entryCount; i++)
+            {
+                Console.Write(this.table[i, 0]);
+                Console.Write(" ");
+            }
+            Console.WriteLine(this.table[entryCount - 1, 1]);
         }
     }
 }

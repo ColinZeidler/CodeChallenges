@@ -29,7 +29,7 @@ namespace asciiHistogram
             Graph myGraph = new Graph(graphbounds, lineCount);
 
             Console.WriteLine("Enter all entry lines");
-            for (int i=0; i < lineCount; i++)
+            for (int i = 0; i < lineCount; i++)
             {
                 input = Console.ReadLine();
                 int[] data = new int[3];
@@ -42,7 +42,7 @@ namespace asciiHistogram
 
                 myGraph.addEntry(data[0], data[1], data[2]);
             }
-
+            myGraph.printGraph();
 
             Console.ReadLine(); //just hanging around so I can view output
         }
