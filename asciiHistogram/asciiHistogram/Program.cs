@@ -12,7 +12,7 @@ namespace asciiHistogram
         {
             int[] graphbounds;
             int lineCount, count;
-            Console.Write("> ");
+            Console.WriteLine("Enter graph bounds");
             string input = Console.ReadLine();
 
             graphbounds = new int[4];
@@ -22,16 +22,29 @@ namespace asciiHistogram
                 graphbounds[count] = int.Parse(item);
                 count++;
             }
-
-            foreach (int item in graphbounds)
-            {
-                Console.Write(item);
-                Console.Write(" ");
-            }
-            Console.Write("\n");
-
+            Console.WriteLine("Enter entry count");
             input = Console.ReadLine();
             lineCount = int.Parse(input);
+
+            Graph myGraph = new Graph(graphbounds, lineCount);
+
+            Console.WriteLine("Enter all entry lines");
+            for (int i=0; i < lineCount; i++)
+            {
+                input = Console.ReadLine();
+                int[] data = new int[3];
+                count = 0;
+                foreach (string item in input.Split())
+                {
+                    data[count] = int.Parse(item);
+                    count++;
+                }
+
+                myGraph.addEntry(data[0], data[1], data[2]);
+            }
+
+
+            Console.ReadLine(); //just hanging around so I can view output
         }
     }
 }
