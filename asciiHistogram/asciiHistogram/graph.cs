@@ -29,12 +29,35 @@ namespace asciiHistogram
 
         public void printGraph()
         {
-            int columnWidth = 1;
 
-            for (int i = this.bounds[3]; i > this.bounds[2]-1; i--)
+            for (int row = this.bounds[3]; row > this.bounds[2]-1; row--)
             {
-                Console.Write(i);
+                Console.Write(row);
                 // Write all columns out
+                for (int j = 0; j < this.entryCount; j++) {
+                    int temp = this.table[j, 0];
+
+                    //width of x axis label
+                    int columnWidth = 0;
+                    do
+                    {
+                        columnWidth++;
+                        temp = temp / 10;
+                    } while (temp != 0);
+                    for (int space = 0; space < columnWidth; space++)
+                    {
+                        Console.Write(" ");
+                    }
+
+
+                    if (this.table[j, 2] >= row)
+                    {
+                        Console.Write("*");
+                    } else
+                    {
+                        Console.Write(" ");
+                    }
+                }
                 Console.Write("\n");
             }
             Console.Write(" "); //TODO space is width of y axis digits
